@@ -1,0 +1,19 @@
+directories:
+  output: releases
+  buildResources: dist
+appId: Dentsoft
+win:
+  target:
+    - nsis
+files:
+  - filter:
+      - dist/**/*
+      - electron/main.cjs
+      - node_modules/**/*
+      - package.json
+nsis:
+  uninstallDisplayName: uninstall this app
+  license: license.txt
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 25.3.1
